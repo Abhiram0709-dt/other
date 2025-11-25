@@ -7,3 +7,6 @@ kubectl get pods
 kubectl scale deployment mynginx --replicas=3
 kubectl get pods
 kubectl port-forward svc/mynginx 8081:80
+//for nagios
+docker pull jasonrivers/nagios:latest
+docker run --name nagios-server -p 8080:80 -d jasonrivers/nagios:latest
